@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Chatbot in JavaScript | CodingNepal</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts Link For Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <script src="script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-100 h-screen flex items-center justify-center">
+  <button class="chatbot-toggler fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg focus:outline-none">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined hidden">close</span>
+  </button>
+  <div class="chatbot fixed bottom-16 right-4 bg-white rounded-lg shadow-lg w-80 max-w-full hidden flex-col">
+    <header class="bg-blue-500 text-white p-4 flex items-center justify-between rounded-t-lg">
+      <h2 class="text-lg font-semibold">Chatbot</h2>
+      <span class="close-btn material-symbols-outlined cursor-pointer">close</span>
+    </header>
+    <ul class="chatbox p-4 space-y-4 overflow-y-auto h-64">
+      <li class="chat incoming flex items-start space-x-2">
+        <span class="material-symbols-outlined text-blue-500">smart_toy</span>
+        <p class="bg-gray-100 p-2 rounded-lg">Hi there 👋<br>How can I help you today?</p>
+      </li>
+    </ul>
+    <div class="chat-input p-4 bg-gray-100 rounded-b-lg flex items-center space-x-2">
+      <textarea placeholder="Enter a message..." spellcheck="false" required class="flex-grow p-2 rounded-lg border border-gray-300 focus:outline-none"></textarea>
+      <span id="send-btn" class="material-symbols-rounded cursor-pointer text-blue-500">send</span>
+    </div>
+  </div>
+</body>
+</html>
